@@ -1,0 +1,406 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Fiche client — KMC Conseils</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<style>
+:root{--paper:#f7f7f5;--sheet:#fff;--ink:#23262b;--ink-soft:#5a5f66;--navy:#1b2a4a;--navy-soft:#e8ecf3;--brass:#8a6d2f;--brass-soft:#f5efe0;--line:#d5d7da;--line-strong:#b8bcc2;--ok:#2e7d5b;--focus:#2f5fa8}
+@media (prefers-color-scheme: dark){:root{--paper:#131519;--sheet:#1b1e24;--ink:#e7e6e2;--ink-soft:#a3a7ad;--navy:#a9bedf;--navy-soft:#232c3d;--brass:#c9a557;--brass-soft:#2a2517;--line:#3a3e46;--line-strong:#565b64;--ok:#5cb890;--focus:#7ea6dd}}
+body{background:var(--paper);color:var(--ink);font-family:"Public Sans",-apple-system,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.55;margin:0;padding:16px 16px 56px}
+.sheet{max-width:880px;margin:0 auto;background:var(--sheet);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+header.doc{padding:30px 28px 22px;border-bottom:3px solid var(--navy)}
+.cab{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.cab h1{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0;color:var(--navy)}
+.cab .sub{margin:6px 0 0;color:var(--ink-soft);font-size:14px}
+.cab .kmc{text-align:right;font-size:13px;color:var(--ink-soft);line-height:1.5}
+.cab .kmc b{color:var(--ink);font-size:15px}
+main{padding:6px 28px 28px}
+.notice{border:1px solid var(--line);border-left:4px solid var(--brass);background:var(--brass-soft);border-radius:4px;padding:14px 16px;font-size:13.5px;margin:18px 0}
+.notice h3{margin:0 0 6px;font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--brass)}
+.notice p{margin:0}
+section.bloc{margin:26px 0 0}
+.bloc-head{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line-strong);padding-bottom:8px;margin-bottom:16px}
+.bloc-head .num{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:22px;color:var(--brass);min-width:30px}
+.bloc-head h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:20px;margin:0;color:var(--navy)}
+.bloc-head .hint{margin-left:auto;font-size:12.5px;color:var(--ink-soft)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px}
+.grid .full{grid-column:1/-1}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
+.field label .opt{font-weight:400;text-transform:none;letter-spacing:0}
+input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number],select,textarea{font:inherit;color:var(--ink);background:var(--sheet);border:1px solid var(--line-strong);border-radius:4px;padding:8px 10px;width:100%;box-sizing:border-box}
+textarea{min-height:74px;resize:vertical}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+input:disabled,select:disabled,textarea:disabled{opacity:.75}
+.radios,.checks{display:flex;flex-wrap:wrap;gap:8px 18px;padding-top:2px}
+.radios label,.checks label{display:flex;gap:7px;align-items:flex-start;font-size:14px;cursor:pointer}
+.radios input,.checks input{margin-top:3px;accent-color:var(--navy)}
+.tblwrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.tbl th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);text-align:left;padding:6px 8px;border-bottom:1px solid var(--line-strong)}
+.tbl td{padding:6px 8px 6px 0;vertical-align:middle}
+.btn{font:inherit;font-weight:600;border-radius:4px;border:1px solid var(--line-strong);background:var(--sheet);color:var(--ink);padding:10px 18px;cursor:pointer}
+.btn-primary{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn-primary:disabled{opacity:.45;cursor:not-allowed}
+.sign-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px}
+@media (max-width:640px){.sign-row{grid-template-columns:1fr}}
+.sign-box{border:1px dashed var(--line-strong);border-radius:4px;background:var(--paper);position:relative}
+.sign-box canvas{width:100%;height:150px;display:block;touch-action:none;cursor:crosshair}
+.sign-box .clear{position:absolute;top:6px;right:6px;font-size:12px;padding:4px 9px}
+.legal{margin-top:30px;border-top:3px solid var(--navy);padding-top:16px;font-size:12.5px;color:var(--ink-soft)}
+.legal h3{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--navy);margin:14px 0 4px}
+.legal p{margin:0 0 8px}
+.version{margin-top:14px;font-size:11.5px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:10px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:22px}
+.actions .note{font-size:13px;color:var(--ink-soft)}
+.sincere{border:1px solid var(--line-strong);border-left:4px solid var(--navy);border-radius:4px;padding:14px 16px;background:var(--navy-soft);font-size:14px}
+.sincere label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:600}
+.sincere input{margin-top:3px;width:17px;height:17px;accent-color:var(--navy)}
+.ok-banner{background:var(--navy-soft);border-left:4px solid var(--ok);border-radius:4px;padding:14px 16px;margin:18px 0;font-weight:600;color:var(--ok)}
+[hidden]{display:none!important}
+</style></head><body>
+<div class="sheet">
+  <header class="doc">
+    <div class="cab">
+      <div>
+        <h1>Fiche client — Assurance emprunteur</h1>
+        <p class="sub">Document pré-contractuel d'entrée en relation · Recueil des exigences et des besoins (art. L521-4 du code des assurances)</p>
+      </div>
+      <div class="kmc"><b>KMC Conseils</b><br>SARL KMC Conseils Holding — Courtier en assurances<br>ORIAS n° 16004050 · orias.fr<br>Spaces Lyon Part-Dieu, 69003 Lyon · contact@kmc-conseils.fr</div>
+    </div>
+    <div class="notice" style="margin-bottom:0"><h3>Votre intermédiaire</h3><p id="m-intermediaire"></p></div>
+  </header>
+  <main>
+    <div class="ok-banner" id="banner" hidden></div>
+    <div class="notice"><h3>Aucune donnée de santé ne nous est transmise</h3><p id="m-sante"></p></div>
+
+    <section class="bloc">
+      <div class="bloc-head"><span class="num">1</span><h2>Emprunteur</h2></div>
+      <div class="field" style="margin-bottom:14px"><label>Avez-vous déjà déposé un dossier d'assurance de prêt chez un autre courtier ?</label>
+        <div class="radios"><label><input type="radio" name="autre-courtier" value="non" data-r> Non</label><label><input type="radio" name="autre-courtier" value="oui" data-r> Oui</label></div></div>
+      <div class="grid">
+        <div class="field"><label for="e1-civ">Civilité</label><select id="e1-civ" data-k><option value="">—</option><option>Madame</option><option>Monsieur</option><option>Autre</option></select></div>
+        <div class="field"><label for="e1-nom">Nom</label><input type="text" id="e1-nom" data-k autocomplete="family-name"></div>
+        <div class="field"><label for="e1-prenom">Prénom</label><input type="text" id="e1-prenom" data-k autocomplete="given-name"></div>
+        <div class="field"><label for="e1-naissance-nom">Nom de naissance <span class="opt">(si différent)</span></label><input type="text" id="e1-naissance-nom" data-k></div>
+        <div class="field"><label for="e1-ddn">Date de naissance</label><input type="date" id="e1-ddn" data-k></div>
+        <div class="field"><label for="e1-lieu">Ville et département de naissance</label><input type="text" id="e1-lieu" data-k placeholder="Ex. : Saint-Rémy (71)"></div>
+        <div class="field"><label for="e1-pays-naissance">Pays de naissance</label><input type="text" id="e1-pays-naissance" data-k value="France"></div>
+        <div class="field"><label for="e1-nat">Nationalité</label><input type="text" id="e1-nat" data-k value="Française"></div>
+        <div class="field"><label for="e1-resid-fiscale">Pays de résidence fiscale</label><input type="text" id="e1-resid-fiscale" data-k value="France"></div>
+        <div class="field"><label for="e1-sit">Situation familiale</label><select id="e1-sit" data-k><option value="">—</option><option>Célibataire</option><option>Marié(e)</option><option>Pacsé(e)</option><option>Union libre</option><option>Divorcé(e)</option><option>Veuf(ve)</option></select></div>
+        <div class="field full"><label for="e1-adresse">Adresse</label><input type="text" id="e1-adresse" data-k autocomplete="street-address"></div>
+        <div class="field"><label for="e1-cp">Code postal</label><input type="text" id="e1-cp" data-k inputmode="numeric"></div>
+        <div class="field"><label for="e1-ville">Ville</label><input type="text" id="e1-ville" data-k></div>
+        <div class="field"><label for="e1-tel">Téléphone</label><input type="tel" id="e1-tel" data-k autocomplete="tel"></div>
+        <div class="field"><label for="e1-email">Email</label><input type="email" id="e1-email" data-k autocomplete="email"></div>
+        <div class="field"><label for="e1-prof">Profession exacte</label><input type="text" id="e1-prof" data-k placeholder="Ex. : infirmière libérale, conducteur de travaux…"></div>
+        <div class="field"><label for="e1-statut">Statut professionnel</label><select id="e1-statut" data-k><option value="">—</option><option>Salarié cadre</option><option>Salarié non-cadre</option><option>Fonctionnaire cat. A</option><option>Fonctionnaire cat. B ou C</option><option>Profession libérale</option><option>Travailleur non salarié (TNS)</option><option>Dirigeant / gérant</option><option>Retraité</option><option>Sans activité</option></select></div>
+        <div class="field"><label for="e1-secteur">Secteur d'activité</label><input type="text" id="e1-secteur" data-k placeholder="Ex. : bâtiment, juridique, santé…"></div>
+        <div class="field"><label for="e1-km">Déplacements professionnels (km/an)</label>
+          <select id="e1-km" data-k><option value="">—</option><option>Moins de 20 000 km/an</option><option>Plus de 20 000 km/an</option></select></div>
+        <div class="field"><label>Fumeur / vapoteur <span class="opt">(24 derniers mois)</span></label>
+          <div class="radios"><label><input type="radio" name="e1-fumeur" value="non" data-r> Non</label><label><input type="radio" name="e1-fumeur" value="oui" data-r> Oui</label></div></div>
+        <div class="field"><label>Travail avec manutention</label>
+          <div class="radios"><label><input type="radio" name="e1-manut" value="non" data-r> Non</label><label><input type="radio" name="e1-manut" value="oui" data-r> Oui</label></div></div>
+        <div class="field"><label>Travail en hauteur</label>
+          <div class="radios"><label><input type="radio" name="e1-hauteur" value="non" data-r> Non</label><label><input type="radio" name="e1-hauteur" value="oui" data-r> Oui</label></div></div>
+        <div class="field"><label for="e1-etranger">Déplacements professionnels à l'étranger <span class="opt">(pays concernés, ou « non »)</span></label><input type="text" id="e1-etranger" data-k value="Non"></div>
+        <div class="field"><label>Êtes-vous une personne politiquement exposée ? <span class="opt">(mandat public, haute fonction)</span></label>
+          <div class="radios"><label><input type="radio" name="e1-ppe" value="non" data-r> Non</label><label><input type="radio" name="e1-ppe" value="oui" data-r> Oui</label></div></div>
+        <div class="field"><label>Proche d'une personne politiquement exposée ?</label>
+          <div class="radios"><label><input type="radio" name="e1-ppe-proche" value="non" data-r> Non</label><label><input type="radio" name="e1-ppe-proche" value="oui" data-r> Oui</label></div></div>
+        <div class="field full"><label for="e1-sports">Sports ou activités à risque pratiqués régulièrement <span class="opt">(compétition, moto, montagne, plongée, aviation…)</span></label><input type="text" id="e1-sports" data-k placeholder="Aucun sport à risque particulier, ou précisez"></div>
+      </div>
+      <div class="checks" style="margin-top:16px" id="co-toggle-wrap">
+        <label><input type="checkbox" id="coemprunteur"> <b>Il y a un co-emprunteur</b></label>
+      </div>
+    </section>
+
+    <section class="bloc" id="bloc-e2" hidden>
+      <div class="bloc-head"><span class="num">1b</span><h2>Co-emprunteur</h2></div>
+      <div class="grid">
+        <div class="field"><label for="e2-civ">Civilité</label><select id="e2-civ" data-k><option value="">—</option><option>Madame</option><option>Monsieur</option><option>Autre</option></select></div>
+        <div class="field"><label for="e2-nom">Nom</label><input type="text" id="e2-nom" data-k></div>
+        <div class="field"><label for="e2-prenom">Prénom</label><input type="text" id="e2-prenom" data-k></div>
+        <div class="field"><label for="e2-naissance-nom">Nom de naissance</label><input type="text" id="e2-naissance-nom" data-k></div>
+        <div class="field"><label for="e2-ddn">Date de naissance</label><input type="date" id="e2-ddn" data-k></div>
+        <div class="field"><label for="e2-lieu">Ville et département de naissance</label><input type="text" id="e2-lieu" data-k></div>
+        <div class="field"><label for="e2-pays-naissance">Pays de naissance</label><input type="text" id="e2-pays-naissance" data-k value="France"></div>
+        <div class="field"><label for="e2-nat">Nationalité</label><input type="text" id="e2-nat" data-k value="Française"></div>
+        <div class="field"><label for="e2-resid-fiscale">Pays de résidence fiscale</label><input type="text" id="e2-resid-fiscale" data-k value="France"></div>
+        <div class="field"><label for="e2-sit">Situation familiale</label><select id="e2-sit" data-k><option value="">—</option><option>Célibataire</option><option>Marié(e)</option><option>Pacsé(e)</option><option>Union libre</option><option>Divorcé(e)</option><option>Veuf(ve)</option></select></div>
+        <div class="field"><label for="e2-tel">Téléphone</label><input type="tel" id="e2-tel" data-k></div>
+        <div class="field"><label for="e2-email">Email</label><input type="email" id="e2-email" data-k></div>
+        <div class="field"><label for="e2-prof">Profession exacte</label><input type="text" id="e2-prof" data-k></div>
+        <div class="field"><label for="e2-statut">Statut professionnel</label><select id="e2-statut" data-k><option value="">—</option><option>Salarié cadre</option><option>Salarié non-cadre</option><option>Fonctionnaire cat. A</option><option>Fonctionnaire cat. B ou C</option><option>Profession libérale</option><option>Travailleur non salarié (TNS)</option><option>Dirigeant / gérant</option><option>Retraité</option><option>Sans activité</option></select></div>
+        <div class="field"><label for="e2-secteur">Secteur d'activité</label><input type="text" id="e2-secteur" data-k></div>
+        <div class="field"><label for="e2-km">Déplacements professionnels (km/an)</label>
+          <select id="e2-km" data-k><option value="">—</option><option>Moins de 20 000 km/an</option><option>Plus de 20 000 km/an</option></select></div>
+        <div class="field"><label>Fumeur / vapoteur <span class="opt">(24 derniers mois)</span></label>
+          <div class="radios"><label><input type="radio" name="e2-fumeur" value="non" data-r> Non</label><label><input type="radio" name="e2-fumeur" value="oui" data-r> Oui</label></div></div>
+        <div class="field"><label>Travail avec manutention</label>
+          <div class="radios"><label><input type="radio" name="e2-manut" value="non" data-r> Non</label><label><input type="radio" name="e2-manut" value="oui" data-r> Oui</label></div></div>
+        <div class="field"><label>Travail en hauteur</label>
+          <div class="radios"><label><input type="radio" name="e2-hauteur" value="non" data-r> Non</label><label><input type="radio" name="e2-hauteur" value="oui" data-r> Oui</label></div></div>
+        <div class="field"><label for="e2-etranger">Déplacements professionnels à l'étranger <span class="opt">(pays, ou « non »)</span></label><input type="text" id="e2-etranger" data-k value="Non"></div>
+        <div class="field"><label>Personne politiquement exposée ?</label>
+          <div class="radios"><label><input type="radio" name="e2-ppe" value="non" data-r> Non</label><label><input type="radio" name="e2-ppe" value="oui" data-r> Oui</label></div></div>
+        <div class="field"><label>Proche d'une personne politiquement exposée ?</label>
+          <div class="radios"><label><input type="radio" name="e2-ppe-proche" value="non" data-r> Non</label><label><input type="radio" name="e2-ppe-proche" value="oui" data-r> Oui</label></div></div>
+        <div class="field full"><label for="e2-sports">Sports ou activités à risque pratiqués régulièrement</label><input type="text" id="e2-sports" data-k></div>
+      </div>
+    </section>
+
+    <section class="bloc">
+      <div class="bloc-head"><span class="num">2</span><h2>Votre projet et vos prêts</h2></div>
+      <div class="field" style="margin-bottom:14px"><label>Nature de la demande</label>
+        <div class="radios"><label><input type="radio" name="nature" value="nouveau" data-r checked> Nouveau prêt</label><label><input type="radio" name="nature" value="substitution" data-r> Changement d'assurance sur un prêt existant (loi Lemoine)</label></div></div>
+      <div class="grid">
+        <div class="field"><label for="p-type">Objet du financement</label><select id="p-type" data-k><option value="">—</option><option>Résidence principale</option><option>Résidence secondaire</option><option>Investissement locatif</option><option>Prêt professionnel</option><option>Rachat de crédits</option><option>Autre</option></select></div>
+        <div class="field"><label for="p-banque">Banque prêteuse</label><input type="text" id="p-banque" data-k></div>
+        <div class="field"><label for="p-montant">Montant total de l'opération (€)</label><input type="number" id="p-montant" data-k min="0" step="1000"></div>
+        <div class="field"><label for="p-date">Date de signature de l'offre de prêt <span class="opt">(même approximative — ou date d'effet souhaitée)</span></label><input type="date" id="p-date" data-k></div>
+        <div class="field"><label for="p-nature">Nature du prêt</label>
+          <select id="p-nature" data-k><option value="">—</option><option>Hypothécaire</option><option>Caution (Crédit Logement…)</option><option>Privilège de prêteur de deniers</option><option>Autre / je ne sais pas</option></select></div>
+      </div>
+      <div class="tblwrap" style="margin-top:16px"><table class="tbl"><thead><tr><th style="width:24%">Type de prêt</th><th>Montant (€)</th><th>Durée (mois)</th><th>Différé (mois)</th><th>Taux (%)</th></tr></thead><tbody id="prets"></tbody></table></div>
+      <button type="button" class="btn" id="addpret" style="margin-top:10px;font-size:13px;padding:7px 12px">+ Ajouter un prêt</button>
+      <div class="grid" style="margin-top:16px">
+        <div class="field"><label for="q-e1">Quotité souhaitée — emprunteur (%)</label><input type="number" id="q-e1" data-k min="1" max="100" value="100"></div>
+        <div class="field"><label for="q-e2">Quotité souhaitée — co-emprunteur (%)</label><input type="number" id="q-e2" data-k min="0" max="100"></div>
+      </div>
+    </section>
+
+    <section class="bloc">
+      <div class="bloc-head"><span class="num">3</span><h2>Vos exigences et vos besoins</h2><span class="hint">Base du conseil — art. L521-4 c. assur.</span></div>
+      <div class="field"><label>Garanties souhaitées ou exigées par la banque</label>
+        <div class="checks">
+          <label><input type="checkbox" id="g-deces" data-c checked disabled> Décès (socle)</label>
+          <label><input type="checkbox" id="g-ptia" data-c checked> PTIA</label>
+          <label><input type="checkbox" id="g-itt" data-c> ITT — arrêt de travail</label>
+          <label><input type="checkbox" id="g-ipt" data-c> IPT — invalidité totale</label>
+          <label><input type="checkbox" id="g-ipp" data-c> IPP — invalidité partielle</label>
+          <label><input type="checkbox" id="g-pe" data-c> Perte d'emploi</label>
+        </div></div>
+      <div class="grid" style="margin-top:14px">
+        <div class="field"><label for="b-fiche">La banque a-t-elle remis sa fiche d'exigences de garanties (critères CCSF) ?</label><select id="b-fiche" data-k><option value="">—</option><option>Oui — je la fournis</option><option>Non / je ne sais pas</option></select></div>
+        <div class="field"><label for="b-budget">Budget mensuel indicatif (€/mois) <span class="opt">(facultatif)</span></label><input type="number" id="b-budget" data-k min="0"></div>
+        <div class="field full"><label>Votre priorité principale</label>
+          <div class="radios"><label><input type="radio" name="prio" value="formalites" data-r> Le moins de formalités médicales possible</label><label><input type="radio" name="prio" value="prix" data-r> Le meilleur tarif</label><label><input type="radio" name="prio" value="garanties" data-r> Le meilleur niveau de garanties</label><label><input type="radio" name="prio" value="rapidite" data-r> La rapidité de mise en place</label></div></div>
+        <div class="field full" style="border:1px solid var(--line-strong);border-left:4px solid var(--brass);border-radius:4px;padding:14px 16px;background:var(--brass-soft)">
+          <label style="color:var(--brass)">Votre assurabilité — questions facultatives d'orientation</label>
+          <p style="margin:6px 0 10px;font-size:13px" id="m-assurabilite"></p>
+          <div class="field"><label>Pensez-vous qu'un élément de santé, passé ou présent, pourrait compliquer votre assurance de prêt ?</label>
+            <div class="radios"><label><input type="radio" name="a-sante" value="non" data-r> Non</label><label><input type="radio" name="a-sante" value="oui" data-r> Oui</label><label><input type="radio" name="a-sante" value="nsp" data-r> Je ne sais pas</label></div></div>
+          <div class="field" style="margin-top:10px"><label>Pensez-vous relever du droit à l'oubli ? <span class="opt">(certains cancers ou l'hépatite C, fin de traitement depuis plus de 5 ans)</span></label>
+            <div class="radios"><label><input type="radio" name="a-oubli" value="non" data-r> Non</label><label><input type="radio" name="a-oubli" value="oui" data-r> Oui</label><label><input type="radio" name="a-oubli" value="nsp" data-r> Je ne sais pas</label></div></div>
+          <div class="field" style="margin-top:10px"><label>Pensez-vous relever du dispositif AERAS ? <span class="opt">(s'assurer avec un risque aggravé de santé)</span></label>
+            <div class="radios"><label><input type="radio" name="a-aeras" value="non" data-r> Non</label><label><input type="radio" name="a-aeras" value="oui" data-r> Oui</label><label><input type="radio" name="a-aeras" value="nsp" data-r> Je ne sais pas</label></div></div>
+          <div class="checks" style="margin-top:10px"><label><input type="checkbox" id="a-tel" data-c> Je préfère aborder le sujet santé uniquement par téléphone avec mon conseiller.</label></div>
+        </div>
+        <div class="field full"><label for="b-deja-presente">Avez-vous déjà présenté ce dossier d'assurance à votre banque ou à une compagnie ? <span class="opt">(laquelle ?)</span></label>
+          <input type="text" id="b-deja-presente" data-k placeholder="Non — ou précisez : ex. assurance groupe de la banque, compagnie X…"></div>
+        <div class="field full"><label>A-t-il fait l'objet d'un refus, d'un ajournement ou d'exclusions ? <span class="opt">(sans en indiquer le motif)</span></label>
+          <div class="radios"><label><input type="radio" name="b-refus" value="non" data-r> Non</label><label><input type="radio" name="b-refus" value="oui" data-r> Oui</label></div></div>
+        <div class="field full"><label for="b-contraintes">Contraintes ou attentes particulières <span class="opt">(jamais d'information médicale ici)</span></label><textarea id="b-contraintes" data-k></textarea></div>
+      </div>
+    </section>
+
+    <section class="bloc">
+      <div class="bloc-head"><span class="num">3b</span><h2>Pour aller plus loin</h2><span class="hint">Facultatif — pour vous proposer d'autres services du cabinet</span></div>
+      <div class="grid">
+        <div class="field"><label for="x-impot">Payez-vous plus de 3 000 € d'impôt par an ?</label>
+          <select id="x-impot" data-k><option value="">Sans réponse</option><option>Oui</option><option>Non</option></select></div>
+        <div class="field"><label for="x-mutuelle">Souhaitez-vous un comparatif pour améliorer votre complémentaire santé ?</label>
+          <select id="x-mutuelle" data-k><option value="">Sans réponse</option><option>Oui</option><option>Non</option></select></div>
+        <div class="field"><label for="x-retraite">Connaissez-vous votre âge de départ à la retraite et vos trimestres acquis ?</label>
+          <select id="x-retraite" data-k><option value="">Sans réponse</option><option>Oui</option><option>Non</option></select></div>
+        <div class="field"><label for="x-bilan">Seriez-vous intéressé(e) par un bilan retraite complet offert ?</label>
+          <select id="x-bilan" data-k><option value="">Sans réponse</option><option>Oui</option><option>Non</option></select></div>
+      </div>
+    </section>
+
+    <section class="bloc">
+      <div class="bloc-head"><span class="num">4</span><h2>Consentements facultatifs</h2><span class="hint">Cases libres — sans effet sur votre étude</span></div>
+      <div class="checks" style="flex-direction:column;gap:10px">
+        <label><input type="checkbox" id="c-news" data-c> J'accepte de recevoir les informations et offres de KMC Conseils par email. <span class="opt">(retirable à tout moment)</span></label>
+        <label><input type="checkbox" id="c-cas" data-c> J'accepte que mon dossier, une fois anonymisé, serve d'exemple (cas client) dans la communication du cabinet.</label>
+      </div>
+    </section>
+
+    <div class="notice"><h3>Usage de l'intelligence artificielle</h3><p id="m-ia"></p></div>
+
+    <section class="bloc" id="bloc-submit">
+      <div class="actions">
+        <button type="button" class="btn btn-primary" id="envoyer">Transmettre ma fiche à mon conseiller</button>
+        <span class="note" id="envoyer-note"></span>
+      </div>
+    </section>
+
+    <section class="bloc" id="bloc-sign" hidden>
+      <div class="bloc-head"><span class="num">5</span><h2>Déclaration et signature</h2></div>
+      <div class="notice"><h3>Frais d'intermédiation</h3><p id="m-honoraires"></p>
+        <div class="checks" style="margin-top:8px"><label><input type="checkbox" id="h-ack"> <b>Je reconnais avoir été informé(e) du montant des frais d'intermédiation avant de signer.</b></label></div></div>
+      <div class="sincere"><label><input type="checkbox" id="sincerite"><span id="m-sincerite"></span></label></div>
+      <div class="sign-row">
+        <div class="field"><label for="sig-lieu">Fait à</label><input type="text" id="sig-lieu">
+          <label for="sig-date" style="margin-top:10px">Le</label><input type="date" id="sig-date"></div>
+        <div class="field"><label>Signature de l'emprunteur</label>
+          <div class="sign-box"><canvas id="sig-canvas" aria-label="Zone de signature manuscrite"></canvas>
+          <button type="button" class="btn clear" id="sig-clear" style="font-size:12px;padding:4px 9px">Effacer</button></div></div>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn btn-primary" id="signer" disabled>Signer ma fiche</button>
+        <span class="note" id="signer-note">Le bouton s'active après la certification de sincérité et une signature tracée.</span>
+      </div>
+    </section>
+
+    <div class="legal">
+      <h3>Protection de vos données</h3><p id="m-rgpd"></p>
+      <h3>Commercialisation à distance</h3><p id="m-distance"></p>
+      <div class="version"><span id="m-version"></span><span>KMC Conseils · Fiche client pré-contractuelle</span></div>
+    </div>
+  </main>
+</div>
+<script>
+window.__boot=function(){
+"use strict";
+var I=window.__INIT,M=window.__MENTIONS;
+["intermediaire","sante","ia","sincerite","rgpd","distance","assurabilite"].forEach(function(k){var el=document.getElementById("m-"+k);if(el)el.textContent=M[k];});
+document.getElementById("m-version").textContent="Notice d'information — "+I.versionNotice+" (enregistrée au registre des consentements)";
+
+var tbody=document.getElementById("prets"),nPrets=0;
+function ajouterPret(v){nPrets++;var n=nPrets,tr=document.createElement("tr");
+  tr.innerHTML='<td><select id="pret'+n+'-type" data-k><option>Amortissable</option><option>In fine</option><option>Relais</option><option>Prêt à taux zéro</option></select></td>'+
+  '<td><input type="number" id="pret'+n+'-montant" data-k min="0" step="1000"></td>'+
+  '<td><input type="number" id="pret'+n+'-duree" data-k min="0" step="12"></td>'+
+  '<td><input type="number" id="pret'+n+'-differe" data-k min="0" value="0"></td>'+
+  '<td><input type="number" id="pret'+n+'-taux" data-k min="0" step="0.01"></td>';
+  tbody.appendChild(tr);
+  if(v){["type","montant","duree","differe","taux"].forEach(function(f){var el=document.getElementById("pret"+n+"-"+f);if(el&&v[f]!=null)el.value=v[f];});}}
+document.getElementById("addpret").addEventListener("click",function(){if(nPrets<4)ajouterPret();});
+
+var co=document.getElementById("coemprunteur"),blocE2=document.getElementById("bloc-e2");
+co.addEventListener("change",function(){blocE2.hidden=!co.checked;});
+
+function collecter(){
+  var d={prets:[]};
+  document.querySelectorAll("[data-k]").forEach(function(el){if(el.id.indexOf("pret")!==0&&el.value)d[el.id]=el.value;});
+  document.querySelectorAll("[data-c]").forEach(function(el){d[el.id]=el.checked;});
+  document.querySelectorAll("[data-r]:checked").forEach(function(el){d[el.name]=el.value;});
+  d.coemprunteur=co.checked;
+  for(var n=1;n<=nPrets;n++){var t=document.getElementById("pret"+n+"-type");if(!t)continue;
+    var p={type:t.value,montant:val("pret"+n+"-montant"),duree:val("pret"+n+"-duree"),differe:val("pret"+n+"-differe"),taux:val("pret"+n+"-taux")};
+    if(p.montant||p.duree)d.prets.push(p);}
+  return d;
+  function val(id){var e=document.getElementById(id);return e?e.value:null;}}
+
+function restaurer(d){
+  if(!d)return;
+  Object.keys(d).forEach(function(k){
+    var el=document.getElementById(k);
+    if(el&&el.hasAttribute("data-k"))el.value=d[k];
+    if(el&&el.hasAttribute("data-c"))el.checked=!!d[k];});
+  document.querySelectorAll("[data-r]").forEach(function(el){if(d[el.name]===el.value)el.checked=true;});
+  if(d.coemprunteur){co.checked=true;blocE2.hidden=false;}
+  (d.prets&&d.prets.length?d.prets:[null]).forEach(function(p){ajouterPret(p);});
+  if(!d.prets||!d.prets.length){}
+}
+
+// Pré-remplissage : payload existant, sinon identité connue du cabinet
+if(I.payload){restaurer(I.payload);}
+else{
+  ajouterPret();
+  if(I.nom)document.getElementById("e1-nom").value=I.nom;
+  if(I.prenom)document.getElementById("e1-prenom").value=I.prenom;
+  if(I.email)document.getElementById("e1-email").value=I.email;
+  if(I.telephone)document.getElementById("e1-tel").value=I.telephone;
+}
+
+var banner=document.getElementById("banner"),blocSubmit=document.getElementById("bloc-submit"),blocSign=document.getElementById("bloc-sign");
+function verrouiller(){document.querySelectorAll("[data-k],[data-c],[data-r],#coemprunteur,#addpret").forEach(function(el){el.disabled=true;});}
+function bandeau(txt){banner.textContent=txt;banner.hidden=false;}
+
+var t=new URLSearchParams(location.search).get("t");
+async function poster(body){
+  var r=await fetch(window.__FN,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(Object.assign({t:t},body))});
+  var j=await r.json().catch(function(){return{};});
+  if(!r.ok)throw new Error(j.error||"Une erreur est survenue. Réessayez ou contactez votre conseiller.");
+  return j;}
+
+document.getElementById("envoyer").addEventListener("click",async function(){
+  var btn=this,note=document.getElementById("envoyer-note");
+  var d=collecter();
+  if(!d["e1-nom"]||!d["e1-prenom"]||!d["e1-email"]){note.textContent="Nom, prénom et email sont nécessaires pour vous recontacter.";return;}
+  btn.disabled=true;note.textContent="Transmission en cours…";
+  try{await poster({action:"submit",data:d});
+    bandeau("✓ Votre fiche a bien été transmise. Votre conseiller KMC Conseils revient vers vous rapidement.");
+    verrouiller();blocSubmit.hidden=true;window.scrollTo({top:0,behavior:"smooth"});}
+  catch(e){btn.disabled=false;note.textContent=e.message;}});
+
+// ----- Mode signature -----
+var drew=false;
+function initSignature(){
+  var canvas=document.getElementById("sig-canvas"),ctx=canvas.getContext("2d"),drawing=false;
+  function resize(){var r=canvas.getBoundingClientRect(),dp=window.devicePixelRatio||1;
+    canvas.width=r.width*dp;canvas.height=r.height*dp;ctx.scale(dp,dp);
+    ctx.lineWidth=1.8;ctx.lineCap="round";ctx.lineJoin="round";
+    ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue("--navy").trim()||"#1b2a4a";}
+  resize();
+  function pos(e){var r=canvas.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top];}
+  canvas.addEventListener("pointerdown",function(e){drawing=true;drew=true;canvas.setPointerCapture(e.pointerId);var p=pos(e);ctx.beginPath();ctx.moveTo(p[0],p[1]);majSigner();});
+  canvas.addEventListener("pointermove",function(e){if(!drawing)return;var p=pos(e);ctx.lineTo(p[0],p[1]);ctx.stroke();});
+  canvas.addEventListener("pointerup",function(){drawing=false;});
+  document.getElementById("sig-clear").addEventListener("click",function(){ctx.clearRect(0,0,canvas.width,canvas.height);drew=false;majSigner();});
+  return canvas;}
+
+var sinc=document.getElementById("sincerite"),btnSigner=document.getElementById("signer"),hAck=document.getElementById("h-ack");
+function majSigner(){btnSigner.disabled=!(sinc.checked&&drew&&hAck.checked);}
+sinc.addEventListener("change",majSigner);hAck.addEventListener("change",majSigner);
+(function(){var el=document.getElementById("m-honoraires");
+  if(I.honoraires!=null&&Number(I.honoraires)>0){el.textContent="Nos honoraires de courtage s'élèvent à "+Number(I.honoraires).toLocaleString("fr-FR",{minimumFractionDigits:0,maximumFractionDigits:2})+" € TTC. Ils sont dus si l'adhésion est concrétisée. En vertu de l'article 261 C 2° du CGI, les opérations d'assurance sont exonérées de TVA. Ces frais correspondent à la recherche réalisée par votre conseiller pour vous trouver la meilleure solution au meilleur tarif et à un suivi personnalisé.";}
+  else{el.textContent="Sur ce dossier, notre rémunération est constituée de commissions versées par l'assureur : aucun honoraire ne vous est facturé directement.";}})();
+
+if(I.statut==="recue"){
+  verrouiller();blocSubmit.hidden=true;
+  bandeau("Votre fiche a été transmise le "+(I.payload?"":"")+"— votre conseiller prépare votre étude. Pour la modifier, contactez-le.");
+}else if(I.statut==="attente_signature"){
+  verrouiller();blocSubmit.hidden=true;blocSign.hidden=false;
+  bandeau("Relisez votre fiche ci-dessous, puis signez-la en bas de page pour valider votre dossier.");
+  var canvas=initSignature();
+  var today=new Date();document.getElementById("sig-date").value=today.toISOString().slice(0,10);
+  btnSigner.addEventListener("click",async function(){
+    var note=document.getElementById("signer-note");
+    btnSigner.disabled=true;note.textContent="Signature en cours…";
+    try{
+      await poster({action:"sign",signature:canvas.toDataURL("image/png"),lieu:document.getElementById("sig-lieu").value,date:document.getElementById("sig-date").value,hono_ack:hAck.checked});
+      blocSign.hidden=true;
+      bandeau("✓ Votre fiche est signée. Merci ! Votre conseiller vous confirme la suite par email.");
+      window.scrollTo({top:0,behavior:"smooth"});}
+    catch(e){btnSigner.disabled=false;note.textContent=e.message;}});
+}else if(I.statut==="signee"){
+  verrouiller();blocSubmit.hidden=true;
+  bandeau("✓ Fiche signée le "+(I.signeeLe?new Date(I.signeeLe).toLocaleDateString("fr-FR"):"")+" — merci. Ce document est archivé par votre cabinet.");
+}
+};
+</script>
+<script>
+(async function(){
+  var FN="https://qtlzjoqrhjikljldkmap.supabase.co/functions/v1/fiche-client";
+  window.__FN=FN;
+  var t=new URLSearchParams(location.search).get("t");
+  function mort(msg){document.body.innerHTML='<div style="font-family:sans-serif;display:grid;place-items:center;min-height:90vh"><div style="max-width:460px;text-align:center;border:1px solid #d5d7da;border-radius:6px;padding:28px;background:#fff"><h1 style="font-size:20px;color:#1b2a4a">Lien invalide ou expiré</h1><p>'+msg+'</p><p style="font-size:13px;color:#5a5f66">KMC Conseils — courtier en assurances · ORIAS n° 16004050</p></div></div>';}
+  if(!t){mort("Ce lien de fiche client est incomplet. Contactez votre conseiller KMC Conseils.");return;}
+  try{
+    var r=await fetch(FN+"?t="+encodeURIComponent(t)+"&format=json");
+    if(!r.ok){mort("Ce lien n'est plus valable. Contactez votre conseiller KMC Conseils pour en recevoir un nouveau.");return;}
+    var j=await r.json();
+    window.__INIT=j.init; window.__MENTIONS=j.mentions;
+    window.__boot();
+  }catch(e){mort("Connexion impossible. Vérifiez votre réseau puis rechargez la page.");}
+})();
+</script>
+
+</body></html>
