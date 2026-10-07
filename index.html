@@ -187,11 +187,8 @@ input:disabled,select:disabled,textarea:disabled{opacity:.75}
         </div></div>
       <div class="grid" style="margin-top:14px">
         <div class="field"><label for="b-fiche">La banque a-t-elle remis sa fiche d'exigences de garanties (critères CCSF) ?</label><select id="b-fiche" data-k><option value="">—</option><option>Oui — je la fournis</option><option>Non / je ne sais pas</option></select></div>
-        <div class="field"><label for="b-budget">Budget mensuel indicatif (€/mois) <span class="opt">(facultatif)</span></label><input type="number" id="b-budget" data-k min="0"></div>
-        <div class="field full"><label>Votre priorité principale</label>
-          <div class="radios"><label><input type="radio" name="prio" value="formalites" data-r> Le moins de formalités médicales possible</label><label><input type="radio" name="prio" value="prix" data-r> Le meilleur tarif</label><label><input type="radio" name="prio" value="garanties" data-r> Le meilleur niveau de garanties</label><label><input type="radio" name="prio" value="rapidite" data-r> La rapidité de mise en place</label></div></div>
         <div class="field full" style="border:1px solid var(--line-strong);border-left:4px solid var(--brass);border-radius:4px;padding:14px 16px;background:var(--brass-soft)">
-          <label style="color:var(--brass)">Votre assurabilité — questions facultatives d'orientation</label>
+          <label style="color:var(--brass)">Votre assurabilité — questions facultatives d'orientation (mais conseillées)</label>
           <p style="margin:6px 0 10px;font-size:13px" id="m-assurabilite"></p>
           <div class="field"><label>Pensez-vous qu'un élément de santé, passé ou présent, pourrait compliquer votre assurance de prêt ?</label>
             <div class="radios"><label><input type="radio" name="a-sante" value="non" data-r> Non</label><label><input type="radio" name="a-sante" value="oui" data-r> Oui</label><label><input type="radio" name="a-sante" value="nsp" data-r> Je ne sais pas</label></div></div>
@@ -224,12 +221,17 @@ input:disabled,select:disabled,textarea:disabled{opacity:.75}
     </section>
 
     <section class="bloc">
-      <div class="bloc-head"><span class="num">4</span><h2>Consentements facultatifs</h2><span class="hint">Cases libres — sans effet sur votre étude</span></div>
-      <div class="checks" style="flex-direction:column;gap:10px">
-        <label><input type="checkbox" id="c-news" data-c> J'accepte de recevoir les informations et offres de KMC Conseils par email. <span class="opt">(retirable à tout moment)</span></label>
-        <label><input type="checkbox" id="c-cas" data-c> J'accepte que mon dossier, une fois anonymisé, serve d'exemple (cas client) dans la communication du cabinet.</label>
-        <label><input type="checkbox" id="c-partenaire" data-c> J'accepte que KMC Conseils transmette mes coordonnées à l'un de ses partenaires afin qu'il me propose un produit adapté à ma situation (prévoyance, épargne retraite…). <span class="opt">(retirable à tout moment)</span></label>
-        <label><input type="checkbox" id="c-coffre" data-c> Je souhaite être invité(e) à l'espace sécurisé de centralisation de mes contrats d'assurance proposé par le cabinet, et j'accepte que mon conseiller ait un visuel sur les contrats que j'y dépose pour me conseiller.</label>
+      <div class="bloc-head"><span class="num">4</span><h2>Vos consentements</h2><span class="hint">Réponse requise — vous êtes libre d'accepter ou de refuser</span></div>
+      <div style="display:grid;gap:14px">
+        <div class="field"><label>Recevoir les informations et offres de KMC Conseils par email. <span class="opt">(retirable à tout moment)</span></label>
+          <div class="radios"><label><input type="radio" name="c-news" value="oui" data-r> J'accepte</label><label><input type="radio" name="c-news" value="non" data-r> Je refuse</label></div></div>
+        <div class="field"><label>Que mon dossier, une fois anonymisé, serve d'exemple (cas client) dans la communication du cabinet.</label>
+          <div class="radios"><label><input type="radio" name="c-cas" value="oui" data-r> J'accepte</label><label><input type="radio" name="c-cas" value="non" data-r> Je refuse</label></div></div>
+        <div class="field"><label>Que KMC Conseils transmette mes coordonnées à l'un de ses partenaires afin qu'il me propose un produit adapté à ma situation (prévoyance, épargne retraite…). <span class="opt">(retirable à tout moment)</span></label>
+          <div class="radios"><label><input type="radio" name="c-partenaire" value="oui" data-r> J'accepte</label><label><input type="radio" name="c-partenaire" value="non" data-r> Je refuse</label></div></div>
+        <div class="field"><label>Être invité(e) à l'espace sécurisé de centralisation de mes contrats d'assurance proposé par le cabinet, avec un visuel de mon conseiller sur les contrats déposés pour me conseiller.</label>
+          <div class="radios"><label><input type="radio" name="c-coffre" value="oui" data-r> J'accepte</label><label><input type="radio" name="c-coffre" value="non" data-r> Je refuse</label></div></div>
+        <p class="opt" style="margin:0">Chaque choix est libre : accepter ou refuser n'a aucun effet sur votre étude ni sur la qualité de nos services. Une réponse est simplement nécessaire pour transmettre la fiche.</p>
       </div>
     </section>
 
@@ -337,6 +339,8 @@ document.getElementById("envoyer").addEventListener("click",async function(){
   var btn=this,note=document.getElementById("envoyer-note");
   var d=collecter();
   if(!d["e1-nom"]||!d["e1-prenom"]||!d["e1-email"]){note.textContent="Nom, prénom et email sont nécessaires pour vous recontacter.";return;}
+  var manq=["c-news","c-cas","c-partenaire","c-coffre"].filter(function(k){return d[k]!=="oui"&&d[k]!=="non";});
+  if(manq.length){note.textContent="Merci de répondre aux consentements de la section 4 — vous êtes libre d'accepter ou de refuser.";return;}
   btn.disabled=true;note.textContent="Transmission en cours…";
   try{await poster({action:"submit",data:d});
     bandeau("✓ Votre fiche a bien été transmise. Votre conseiller KMC Conseils revient vers vous rapidement.");
