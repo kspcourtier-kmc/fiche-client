@@ -74,6 +74,7 @@ input:disabled,select:disabled,textarea:disabled{opacity:.75}
   <main>
     <div class="ok-banner" id="banner" hidden></div>
     <div class="notice"><h3>Aucune donnée de santé ne nous est transmise</h3><p id="m-sante"></p></div>
+    <div class="notice"><h3>Pourquoi nous recueillons vos informations</h3><p id="m-recueil"></p></div>
 
     <section class="bloc">
       <div class="bloc-head"><span class="num">1</span><h2>Emprunteur</h2></div>
@@ -270,7 +271,7 @@ input:disabled,select:disabled,textarea:disabled{opacity:.75}
 window.__boot=function(){
 "use strict";
 var I=window.__INIT,M=window.__MENTIONS;
-["intermediaire","sante","ia","sincerite","rgpd","distance","assurabilite"].forEach(function(k){var el=document.getElementById("m-"+k);if(el)el.textContent=M[k];});
+["intermediaire","recueil","sante","ia","sincerite","rgpd","distance","assurabilite"].forEach(function(k){var el=document.getElementById("m-"+k);if(el)el.textContent=M[k];});
 document.getElementById("m-version").textContent="Notice d'information — "+I.versionNotice+" (enregistrée au registre des consentements)";
 
 var tbody=document.getElementById("prets"),nPrets=0;
