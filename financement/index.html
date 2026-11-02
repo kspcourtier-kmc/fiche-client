@@ -1,0 +1,258 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Fiche de faisabilité financement — KMC Conseils</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<style>
+:root{--paper:#f7f7f5;--sheet:#fff;--ink:#23262b;--ink-soft:#5a5f66;--navy:#1A578A;--navy-soft:#e8f0f8;--brass:#2075BB;--brass-soft:#eef6fc;--cyan:#49BED5;--line:#d5d7da;--line-strong:#b8bcc2;--ok:#2e7d5b;--focus:#2075BB}
+@media (prefers-color-scheme: dark){:root{--paper:#131519;--sheet:#1b1e24;--ink:#e7e6e2;--ink-soft:#a3a7ad;--navy:#9cc3ea;--navy-soft:#1f2a38;--brass:#6fb0e6;--brass-soft:#1c2733;--line:#3a3e46;--line-strong:#565b64;--ok:#5cb890;--focus:#7ea6dd}}
+body{background:var(--paper);color:var(--ink);font-family:"Public Sans",-apple-system,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.55;margin:0;padding:16px 16px 56px}
+.sheet{max-width:880px;margin:0 auto;background:var(--sheet);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+header.doc{padding:30px 28px 22px;border-bottom:3px solid var(--brass)}
+.cab{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.cab h1{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0;color:var(--navy)}
+.cab .sub{margin:6px 0 0;color:var(--ink-soft);font-size:14px}
+.cab .kmc{text-align:right;font-size:13px;color:var(--ink-soft);line-height:1.5}
+.cab .kmc b{color:var(--ink);font-size:15px}
+main{padding:6px 28px 28px}
+.notice{border:1px solid var(--line);border-left:4px solid var(--cyan);background:var(--brass-soft);border-radius:4px;padding:14px 16px;font-size:13.5px;margin:18px 0}
+.notice h3{margin:0 0 6px;font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--brass)}
+.notice p{margin:0}
+section.bloc{margin:26px 0 0}
+.bloc-head{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line-strong);padding-bottom:8px;margin-bottom:12px}
+.bloc-head .num{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:22px;color:var(--brass);min-width:30px}
+.bloc-head h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:20px;margin:0;color:var(--navy)}
+.intro{margin:0 0 14px;color:var(--ink-soft);font-size:14px}
+.sous{font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--navy);font-weight:700;margin:16px 0 10px;display:flex;align-items:center;gap:10px}
+.sous::after{content:"";flex:1;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px}
+.grid .full{grid-column:1/-1}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label,.field .lbl{font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
+.field .lbl.long{text-transform:none;letter-spacing:0;font-size:14px;font-weight:500;color:var(--ink)}
+.field .opt{font-weight:400;text-transform:none;letter-spacing:0}
+input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number],select,textarea{font:inherit;color:var(--ink);background:var(--sheet);border:1px solid var(--line-strong);border-radius:4px;padding:8px 10px;width:100%;box-sizing:border-box}
+textarea{min-height:74px;resize:vertical}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+input:disabled,select:disabled,textarea:disabled{opacity:.75}
+.money{position:relative}.money input{padding-right:28px}.money::after{content:"€";position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--ink-soft);font-size:13px}
+.radios,.checks{display:flex;flex-wrap:wrap;gap:8px 18px;padding-top:2px}
+.radios label,.checks label{display:flex;gap:7px;align-items:flex-start;font-size:14px;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink)}
+.radios input,.checks input{margin-top:3px;accent-color:var(--navy)}
+.detail{margin-top:6px}
+.tblwrap{overflow-x:auto;margin:6px 0 4px}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+.tbl th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);text-align:left;padding:6px 8px;border-bottom:1px solid var(--line-strong)}
+.tbl td{padding:6px 8px 6px 0;vertical-align:middle}
+.btn{font:inherit;font-weight:600;border-radius:4px;border:1px solid var(--line-strong);background:var(--sheet);color:var(--ink);padding:10px 18px;cursor:pointer}
+.btn-small{padding:6px 12px;font-size:13px}
+.btn-primary{background:var(--brass);border-color:var(--brass);color:#fff}
+.btn-primary:disabled{opacity:.45;cursor:not-allowed}
+.legal{margin-top:30px;border-top:3px solid var(--brass);padding-top:16px;font-size:12.5px;color:var(--ink-soft)}
+.legal h3{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--navy);margin:14px 0 4px}
+.legal p{margin:0 0 8px}
+.version{margin-top:14px;font-size:11.5px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:10px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:22px}
+.actions .note{font-size:13px;color:var(--ink-soft)}
+.consent{border:1px solid var(--line-strong);border-left:4px solid var(--navy);border-radius:4px;padding:14px 16px;background:var(--navy-soft);font-size:14px;margin:12px 0}
+.consent p{margin:0 0 8px}
+.consent .radios{gap:8px 24px}
+.ok-banner{background:var(--navy-soft);border-left:4px solid var(--ok);border-radius:4px;padding:14px 16px;margin:18px 0;font-weight:600;color:var(--ok)}
+.pieces h4{margin:12px 0 4px;font-size:13px;color:var(--navy)}
+.pieces ul{margin:0 0 6px 18px;padding:0;font-size:13.5px}
+.co-toggle{margin:12px 0 0;display:flex;gap:8px;align-items:center;font-weight:600}
+[hidden]{display:none!important}
+</style></head><body>
+<div class="sheet">
+  <header class="doc">
+    <div class="cab">
+      <div>
+        <h1>Fiche de faisabilité financement</h1>
+        <p class="sub">Étude gratuite et sans engagement · transmise directement à notre partenaire financement</p>
+      </div>
+      <div class="kmc"><b>KMC Conseils</b><br>SARL KMC Conseils Holding — Courtier en assurances<br>ORIAS n° 16004050 · www.orias.fr<br>Spaces Lyon Part-Dieu, 69003 Lyon · contact@kmc-conseils.fr</div>
+    </div>
+    <div class="notice" style="margin-bottom:0"><h3>À quoi sert cette fiche</h3><p id="m-objet"></p></div>
+  </header>
+  <main>
+    <div class="ok-banner" id="banner" hidden></div>
+    <div id="apres" hidden></div>
+    <div id="formulaire">
+      <div class="notice"><h3>Aucune donnée de santé</h3><p id="m-sante"></p></div>
+      <p class="intro">Renseignez chaque case qui vous concerne, laissez vide ce que vous ne savez pas : nous le verrons ensemble. Comptez une quinzaine de minutes.</p>
+      <div id="sections"></div>
+
+      <section class="bloc">
+        <div class="bloc-head"><span class="num">8</span><h2>Pièces à envoyer au partenaire</h2></div>
+        <p class="intro">Les pièces ne passent pas par KMC Conseils : vous les enverrez directement à notre partenaire, dont l'adresse s'affiche après la transmission de cette fiche. Inutile d'attendre de tout réunir.</p>
+        <div class="pieces" id="pieces"></div>
+      </section>
+
+      <section class="bloc">
+        <div class="bloc-head"><span class="num">9</span><h2>Consentement et déclaration</h2></div>
+        <div class="consent"><p id="l-transmission"></p>
+          <div class="radios"><label><input type="radio" name="c-transmission" value="Oui"> Oui, j'autorise</label><label><input type="radio" name="c-transmission" value="Non"> Non</label></div></div>
+        <div class="consent"><p id="l-contact"></p>
+          <div class="radios"><label><input type="radio" name="c-contact" value="Oui"> Oui</label><label><input type="radio" name="c-contact" value="Non"> Non</label></div></div>
+        <div class="consent"><label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:600"><input type="checkbox" id="c-exactitude" style="margin-top:3px;width:17px;height:17px;accent-color:var(--navy)"><span id="l-exactitude"></span></label></div>
+        <div class="notice"><h3>Gratuité</h3><p id="m-gratuite"></p></div>
+        <div class="grid">
+          <div class="field"><label for="sig-lieu">Fait à</label><input type="text" id="sig-lieu" data-k></div>
+          <div class="field"><label>Le</label><input type="text" id="sig-date" disabled></div>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="envoyer">Transmettre ma fiche au partenaire financement</button>
+          <span class="note" id="envoyer-note"></span>
+        </div>
+      </section>
+    </div>
+
+    <div class="legal">
+      <h3>KMC Conseils</h3><p id="m-kmc"></p>
+      <h3>Partenaire financement</h3><p id="m-partenaire"></p>
+      <h3>Protection de vos données</h3><p id="m-rgpd"></p>
+      <h3>Réclamations</h3><p id="m-reclamations"></p>
+      <div class="version"><span id="m-version"></span><span>KMC Conseils · Fiche de faisabilité financement</span></div>
+    </div>
+  </main>
+</div>
+<script>
+window.__boot=function(){
+"use strict";
+var I=window.__INIT,S=window.__SCHEMA,P=window.__PARTENAIRE,M=S.mentions;
+["objet","sante","gratuite","kmc","partenaire","rgpd","reclamations"].forEach(function(k){var el=document.getElementById("m-"+k);if(el)el.textContent=M[k];});
+document.getElementById("m-version").textContent="Fiche "+I.versionFiche;
+document.getElementById("l-transmission").textContent=S.consentements.transmission.label;
+document.getElementById("l-contact").textContent=S.consentements.contact.label;
+document.getElementById("l-exactitude").textContent=S.consentements.exactitude.label;
+document.getElementById("sig-date").value=new Date().toLocaleDateString("fr-FR");
+var piecesEl=document.getElementById("pieces");
+piecesEl.innerHTML=S.pieces.map(function(g){return "<h4>"+esc(g.titre)+"</h4><ul>"+g.items.map(function(i){return "<li>"+esc(i)+"</li>";}).join("")+"</ul>";}).join("");
+
+function esc(v){return String(v==null?"":v).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function att(s){return esc(s).replace(/'/g,"&#39;");}
+
+function champ(c,prefix){
+  var id=prefix+c.id,full=c.full||c.type==="checks"||c.type==="textarea"||(c.label.length>70&&c.type!=="money"),h='<div class="field'+(full?" full":"")+'">';
+  var lbl='<span class="lbl'+(c.label.length>90?" long":"")+'">'+esc(c.label)+(c.requis?' *':'')+(c.hint?' <span class="opt">('+esc(c.hint)+')</span>':'')+'</span>';
+  if(c.type==="select"){h+=lbl+'<select id="'+id+'" data-k><option value="">—</option>'+c.options.map(function(o){return '<option>'+esc(o)+'</option>';}).join("")+'</select>';}
+  else if(c.type==="radio"){h+=lbl+'<div class="radios">'+c.options.map(function(o){return '<label><input type="radio" name="'+id+'" value="'+att(o)+'" data-r> '+esc(o)+'</label>';}).join("")+'</div>';}
+  else if(c.type==="checks"){h+=lbl+'<div class="checks">'+c.options.map(function(o){return '<label><input type="checkbox" name="'+id+'" value="'+att(o)+'" data-cx> '+esc(o)+'</label>';}).join("")+'</div>';}
+  else if(c.type==="textarea"){h+=lbl+'<textarea id="'+id+'" data-k></textarea>';}
+  else if(c.type==="money"){h+=lbl+'<div class="money"><input type="text" inputmode="decimal" id="'+id+'" data-k placeholder="0"></div>';}
+  else{h+=lbl+'<input type="'+(c.type==="number"?"number":c.type)+'" id="'+id+'" data-k'+(c.type==="number"?' min="0"':'')+'>';}
+  if(c.detail){h+='<div class="detail" id="'+id+'-detail" hidden><input type="text" id="'+prefix+c.detail.id+'" data-k placeholder="'+att(c.detail.label)+'" aria-label="'+att(c.detail.label)+'"></div>';}
+  return h+'</div>';}
+
+function grille(champs,prefix){return '<div class="grid">'+champs.map(function(c){return champ(c,prefix);}).join("")+'</div>';}
+
+function tableau(t){
+  var h='<div class="sous">'+esc(t.titre)+'</div><div class="tblwrap"><table class="tbl" id="tbl-'+t.id+'"><thead><tr>'+t.colonnes.map(function(c){return '<th>'+esc(c.label)+'</th>';}).join("")+'</tr></thead><tbody></tbody></table></div>';
+  h+='<button type="button" class="btn btn-small" data-add="'+t.id+'">+ '+esc(t.ajouter)+'</button>';
+  return h;}
+
+var secEl=document.getElementById("sections"),html="";
+S.sections.forEach(function(sec){
+  html+='<section class="bloc" id="sec-'+sec.id+'"><div class="bloc-head"><span class="num">'+esc(sec.num)+'</span><h2>'+esc(sec.titre)+'</h2></div>';
+  if(sec.intro)html+='<p class="intro">'+esc(sec.intro)+'</p>';
+  if(sec.parEmprunteur){
+    html+='<div class="sous">Emprunteur 1</div>'+grille(sec.champs,"e1-");
+    if(sec.id==="emprunteurs")html+='<label class="co-toggle"><input type="checkbox" id="coemprunteur"> Il y a un co-emprunteur</label>';
+    html+='<div class="bloc-e2" hidden><div class="sous">Emprunteur 2</div>'+grille(sec.champs,"e2-")+'</div>';
+  }else{html+=grille(sec.champs,"");}
+  if(sec.tableaux)sec.tableaux.forEach(function(t){html+=tableau(t);});
+  if(sec.pied)html+='<div style="margin-top:14px">'+grille(sec.pied,"")+'</div>';
+  html+='</section>';});
+secEl.innerHTML=html;
+
+// Co-emprunteur : affiche les blocs « Emprunteur 2 » de toutes les sections concernées
+var co=document.getElementById("coemprunteur");
+co.addEventListener("change",function(){document.querySelectorAll(".bloc-e2").forEach(function(b){b.hidden=!co.checked;});});
+
+// Champ de précision : visible quand la 2e option est choisie (Oui / Non pour la période d'essai / Ancien)
+document.querySelectorAll("[data-r]").forEach(function(r){r.addEventListener("change",function(){
+  var d=document.getElementById(r.name+"-detail");if(!d)return;
+  var opts=Array.prototype.slice.call(document.querySelectorAll('input[name="'+r.name+'"]'));
+  d.hidden=opts.indexOf(r)!==1;});});
+
+// Tableaux à lignes dynamiques
+var tables={};S.sections.forEach(function(sec){(sec.tableaux||[]).forEach(function(t){tables[t.id]=t;});});
+function ajouterLigne(id){
+  var t=tables[id],tb=document.querySelector("#tbl-"+id+" tbody");if(tb.children.length>=t.max)return;
+  var n=tb.children.length,tr=document.createElement("tr");
+  tr.innerHTML=t.colonnes.map(function(c){var cid=id+"-"+n+"-"+c.id;
+    if(c.type==="select")return '<td><select id="'+cid+'" data-cell><option value="">—</option>'+c.options.map(function(o){return '<option>'+esc(o)+'</option>';}).join("")+'</select></td>';
+    if(c.type==="money")return '<td><div class="money"><input type="text" inputmode="decimal" id="'+cid+'" data-cell></div></td>';
+    return '<td><input type="'+(c.type==="date"?"date":"text")+'" id="'+cid+'" data-cell></td>';}).join("");
+  tb.appendChild(tr);}
+document.querySelectorAll("[data-add]").forEach(function(b){b.addEventListener("click",function(){ajouterLigne(b.getAttribute("data-add"));});});
+Object.keys(tables).forEach(function(id){ajouterLigne(id);});
+
+function collecter(){
+  var d={coemprunteur:co.checked};
+  document.querySelectorAll("[data-k]").forEach(function(el){if(el.value&&!el.closest(".bloc-e2[hidden]"))d[el.id]=el.value;});
+  document.querySelectorAll("[data-r]:checked").forEach(function(el){if(!el.closest(".bloc-e2[hidden]"))d[el.name]=el.value;});
+  document.querySelectorAll("[data-cx]:checked").forEach(function(el){(d[el.name]=d[el.name]||[]).push(el.value);});
+  document.querySelectorAll('input[name="c-transmission"]:checked,input[name="c-contact"]:checked').forEach(function(el){d[el.name]=el.value;});
+  d["c-exactitude"]=document.getElementById("c-exactitude").checked;
+  Object.keys(tables).forEach(function(id){var t=tables[id],rows=[];
+    document.querySelectorAll("#tbl-"+id+" tbody tr").forEach(function(tr,n){var r={},vide=true;
+      t.colonnes.forEach(function(c){var el=document.getElementById(id+"-"+n+"-"+c.id);if(el&&el.value){r[c.id]=el.value;vide=false;}});
+      if(!vide)rows.push(r);});
+    d[id]=rows;});
+  return d;}
+
+// Identité connue du cabinet
+if(I.nom)document.getElementById("e1-nom").value=I.nom;
+if(I.prenom)document.getElementById("e1-prenom").value=I.prenom;
+if(I.email)document.getElementById("e1-email").value=I.email;
+if(I.telephone)document.getElementById("e1-tel").value=I.telephone;
+
+var banner=document.getElementById("banner"),formulaire=document.getElementById("formulaire"),apres=document.getElementById("apres");
+function bandeau(txt){banner.textContent=txt;banner.hidden=false;}
+function afficherSuite(dest){
+  apres.innerHTML='<div class="notice"><h3>Et maintenant ?</h3><p>'+esc(dest.nom)+' vous recontacte pour la suite. Envoyez-lui directement vos pièces justificatives'+(dest.email?' à <a href="mailto:'+att(dest.email)+'?subject='+encodeURIComponent("Pièces pour mon étude de faisabilité — "+(I.prenom||"")+" "+(I.nom||""))+'"><b>'+esc(dest.email)+'</b></a>':'')+'. Les pièces ne transitent pas par KMC Conseils.</p></div><div class="pieces">'+S.pieces.map(function(g){return "<h4>"+esc(g.titre)+"</h4><ul>"+g.items.map(function(i){return "<li>"+esc(i)+"</li>";}).join("")+"</ul>";}).join("")+'</div>';
+  apres.hidden=false;formulaire.hidden=true;}
+
+var t=new URLSearchParams(location.search).get("t");
+async function poster(body){
+  var r=await fetch(window.__FN,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(Object.assign({t:t},body))});
+  var j=await r.json().catch(function(){return{};});
+  if(!r.ok)throw new Error(j.error||"Une erreur est survenue. Réessayez ou contactez KMC Conseils.");
+  return j;}
+
+document.getElementById("envoyer").addEventListener("click",async function(){
+  var btn=this,note=document.getElementById("envoyer-note"),d=collecter();
+  if(!d["e1-nom"]||!d["e1-prenom"]||!d["e1-email"]||!d["e1-tel"]){note.textContent="Nom, prénom, téléphone et e-mail de l'emprunteur 1 sont nécessaires pour vous recontacter (partie 1).";document.getElementById("sec-emprunteurs").scrollIntoView({behavior:"smooth"});return;}
+  if(d["c-transmission"]!=="Oui"&&d["c-transmission"]!=="Non"||d["c-contact"]!=="Oui"&&d["c-contact"]!=="Non"){note.textContent="Merci de répondre aux deux questions de consentement — vous êtes libre d'accepter ou de refuser.";return;}
+  if(d["c-transmission"]!=="Oui"){note.textContent="Sans votre accord de transmission, nous ne pouvons pas envoyer votre fiche au partenaire. Vous pouvez aussi contacter KMC Conseils directement.";return;}
+  if(!d["c-exactitude"]){note.textContent="Merci de certifier l'exactitude des informations avant l'envoi.";return;}
+  btn.disabled=true;note.textContent="Transmission en cours…";
+  try{var j=await poster({action:"submit",data:d});
+    bandeau("✓ Votre fiche a été transmise à "+(j.destinataire&&j.destinataire.nom||P.nom)+". KMC Conseils n'en conserve pas le contenu.");
+    afficherSuite(j.destinataire||P);window.scrollTo({top:0,behavior:"smooth"});}
+  catch(e){btn.disabled=false;note.textContent=e.message;}});
+
+if(I.statut==="recue"){
+  bandeau("Votre fiche a été transmise le "+(I.transmisLe?new Date(I.transmisLe).toLocaleDateString("fr-FR"):"")+" à "+P.nom+". Pour la modifier ou la compléter, contactez KMC Conseils ou le partenaire directement.");
+  afficherSuite(P);}
+};
+</script>
+<script>
+(async function(){
+  var FN="https://qtlzjoqrhjikljldkmap.supabase.co/functions/v1/fiche-financement";
+  window.__FN=FN;
+  var t=new URLSearchParams(location.search).get("t");
+  function mort(msg){document.body.innerHTML='<div style="font-family:sans-serif;display:grid;place-items:center;min-height:90vh"><div style="max-width:460px;text-align:center;border:1px solid #d5d7da;border-radius:6px;padding:28px;background:#fff;color:#23262b"><b style="display:block;font-size:18px;margin-bottom:8px">KMC Conseils</b>'+msg+'</div></div>';}
+  if(!t){mort("Ce lien de fiche est incomplet. Contactez votre conseiller KMC Conseils.");return;}
+  try{
+    var r=await fetch(FN+"?t="+encodeURIComponent(t)+"&format=json");
+    if(!r.ok){mort("Ce lien n'est plus valable. Contactez votre conseiller KMC Conseils pour en recevoir un nouveau.");return;}
+    var j=await r.json();
+    window.__INIT=j.init; window.__SCHEMA=j.schema; window.__PARTENAIRE=j.partenaire;
+    window.__boot();
+  }catch(e){mort("Connexion impossible. Vérifiez votre réseau puis rechargez la page.");}
+})();
+</script>
+</body></html>
