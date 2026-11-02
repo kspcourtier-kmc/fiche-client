@@ -142,7 +142,7 @@ function champ(c,prefix){
   else if(c.type==="textarea"){h+=lbl+'<textarea id="'+id+'" data-k></textarea>';}
   else if(c.type==="money"){h+=lbl+'<div class="money"><input type="text" inputmode="decimal" id="'+id+'" data-k placeholder="0"></div>';}
   else{h+=lbl+'<input type="'+(c.type==="number"?"number":c.type)+'" id="'+id+'" data-k'+(c.type==="number"?' min="0"':'')+'>';}
-  if(c.detail){h+='<div class="detail" id="'+id+'-detail" hidden><input type="text" id="'+prefix+c.detail.id+'" data-k placeholder="'+att(c.detail.label)+'" aria-label="'+att(c.detail.label)+'"></div>';}
+  if(c.detail){h+='<div class="detail" id="'+id+'-wrap" hidden><input type="text" id="'+prefix+c.detail.id+'" data-k placeholder="'+att(c.detail.label)+'" aria-label="'+att(c.detail.label)+'"></div>';}
   return h+'</div>';}
 
 function grille(champs,prefix){return '<div class="grid">'+champs.map(function(c){return champ(c,prefix);}).join("")+'</div>';}
@@ -172,7 +172,7 @@ co.addEventListener("change",function(){document.querySelectorAll(".bloc-e2").fo
 
 // Champ de précision : visible quand la 2e option est choisie (Oui / Non pour la période d'essai / Ancien)
 document.querySelectorAll("[data-r]").forEach(function(r){r.addEventListener("change",function(){
-  var d=document.getElementById(r.name+"-detail");if(!d)return;
+  var d=document.getElementById(r.name+"-wrap");if(!d)return;
   var opts=Array.prototype.slice.call(document.querySelectorAll('input[name="'+r.name+'"]'));
   d.hidden=opts.indexOf(r)!==1;});});
 
